@@ -1,4 +1,4 @@
 # Data-structure
 solution of coding problem.<br />
-#Array Problem<br />
-#Binary Search Problem
+--> Array Problem<br />
+--> Binary Search Problem
