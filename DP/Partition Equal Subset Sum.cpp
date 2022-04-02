@@ -30,6 +30,7 @@ public:
         if(sum%2!=0){
             return false;
         }
-          return subset(arr,n,sum/2);
+        sum/=2;//sum of half array
+          return subset(arr,n,sum);
     }
 };
