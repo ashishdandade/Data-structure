@@ -1,0 +1,19 @@
+class Solution {
+public:
+    static bool compare(string a,string b){
+        return a+b>b+a;
+    }
+    string largestNumber(vector<int>& nums) {
+        vector<string>result;
+        for(auto &x:nums){
+            string temp=to_string(x);
+            result.push_back(temp);
+        }
+        sort(result.begin(),result.end(),compare);
+        string ans="";
+        for(string s:result){
+            ans+=s;
+        }
+        return ans[0]=='0'?"0":ans;
+    }
+};
