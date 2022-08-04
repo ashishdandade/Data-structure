@@ -29,7 +29,7 @@ int main()
 // } Driver Code Ends
 
 
-
+// ---------------------------------------using max heap(priority queue)-----------------------------
 int kthSmallest(int mat[MAX][MAX], int n, int k)
 {
   //Your code here
@@ -43,4 +43,21 @@ int kthSmallest(int mat[MAX][MAX], int n, int k)
   }
   return pq.top();
 }
-//
+// -----------------------------------using min heap------------------------
+int kthSmallest(int mat[MAX][MAX], int n, int k)
+{
+  //Your code here
+  priority_queue<int,vector<int>,greater<int>>pq;
+  for(int i=0;i<n;i++){
+      for(int j=0;j<n;j++){
+          pq.push(mat[i][j]);
+          
+      }
+  }
+  int elemnt=0;
+  while(k--){
+      elemnt=pq.top();
+        pq.pop();
+  }
+  return elemnt;
+}
