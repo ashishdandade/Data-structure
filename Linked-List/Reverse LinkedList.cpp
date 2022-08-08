@@ -1,3 +1,26 @@
+//brute force
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        //If linked list is empty then return head
+        if(head==NULL)return head;
+        stack<int> stk;
+        ListNode *temp=head;
+        while(temp!=NULL){
+            stk.push(temp->val);
+            temp=temp->next;
+        }
+        temp=head;
+        while(temp!=NULL){
+            temp->val=stk.top();
+            stk.pop();
+            temp=temp->next;
+        }
+        return head;
+    }
+};
+// time o(n)
+// space o(n)
 class Solution
 {
     public:
@@ -18,3 +41,5 @@ class Solution
     }
     
 };
+time o(n)
+space o(1)
