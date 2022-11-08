@@ -18,3 +18,5 @@ public:
         return ans;
     }
 };
+TC O(N)
+SC O(N)
